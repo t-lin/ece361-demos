@@ -34,8 +34,8 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
-print "Simulating %s packets in M/M/1 system" % numPackets
-print "Average arrival rate = %s; and average service rate = %s" % (arrRate, servRate)
+print("Simulating %s packets in M/M/1 system" % numPackets)
+print("Average arrival rate = %s; and average service rate = %s" % (arrRate, servRate))
 
 # Initialize figure
 fig = plt.figure(figsize=(10, 8))
@@ -63,7 +63,7 @@ for i in range(numVals):
     theorWaitTimes[i] = 1 - ( arrRate / servRate * exp(-(servRate - arrRate) * x_range[i]) )
 
 
-print "\nPlotting figures ... please wait"
+print("\nPlotting figures ... please wait")
 
 # Plot CDFs
 # NOTE: Using matplotlib's histogram to generate CDF results in last point y = 0
@@ -144,4 +144,4 @@ plt.title("Total Wait Times (Queuing + Service) per Packet")
 
 fig.savefig('pkts-wait-time.png')
 
-print "Finished plotting all figures!"
+print("Finished plotting all figures!")

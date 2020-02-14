@@ -26,8 +26,8 @@ bucketSize = 2 # Max tokens in bucket
 # Library imports
 from random import expovariate
 
-print "Simulating %s packets arriving at avg. rate %s" % (numPackets, arrRate)
-print "Token generation rate of %s and max bucket size of %s" % (tokenRate, bucketSize)
+print("Simulating %s packets arriving at avg. rate %s" % (numPackets, arrRate))
+print("Token generation rate of %s and max bucket size of %s" % (tokenRate, bucketSize))
 
 interArrivals = [expovariate(arrRate) for i in range(numPackets)]
 
@@ -44,7 +44,7 @@ for i in range(numPackets):
         # No available token; Drop packet
         dropCount += 1
 
-print
-print "Number of packets dropped: %s" % dropCount
+print()
+print("Number of packets dropped: %s" % dropCount)
 
 

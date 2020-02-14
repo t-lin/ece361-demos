@@ -50,12 +50,12 @@ assert len(packetLengths) == 2,\
 assert len(packetDistribution) == 2,\
     "Length of packetDistribution list must be 2"
 
-print "Simulating %s packets in M/G/1 system" % numPackets
-print "Outgoing link bandwidth = %s bps" % outgoingBW
-print "System utilization = %s%%" % (rho * 100)
-print "Packet distribution:"
-print "\t- %s%% of packets with length %s Bytes" % (packetDistribution[0] * 100, packetLengths[0])
-print "\t- %s%% of packets with length %s Bytes" % (packetDistribution[1] * 100, packetLengths[1])
+print("Simulating %s packets in M/G/1 system" % numPackets)
+print("Outgoing link bandwidth = %s bps" % outgoingBW)
+print("System utilization = %s%%" % (rho * 100))
+print("Packet distribution:")
+print("\t- %s%% of packets with length %s Bytes" % (packetDistribution[0] * 100, packetLengths[0]))
+print("\t- %s%% of packets with length %s Bytes" % (packetDistribution[1] * 100, packetLengths[1]))
 
 # Initialize figure
 fig = plt.figure(figsize=(10, 8))
@@ -85,7 +85,7 @@ for i in range(1, numPackets):
     waitTimes[i] = max(0, waitTimes[i - 1] + serviceTimes[packetSizeIndex[i - 1]] - interArrivals[i])
 
 
-print "\nPlotting figures ... please wait"
+print("\nPlotting figures ... please wait")
 
 # Plot CDF
 # NOTE: Using matplotlib's histogram to generate CDF results in last point y = 0
@@ -165,4 +165,4 @@ plt.title("Total Wait Times (Queuing + Service) per Packet")
 
 fig.savefig('pkts-wait-time.png')
 
-print "Finished plotting all figures!"
+print("Finished plotting all figures!")

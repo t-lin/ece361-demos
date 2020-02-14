@@ -35,8 +35,8 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
-print "Simulating %s packets arriving at avg. rate %s" % (numPackets, arrRate)
-print "Token generation rate of %s and max bucket size of %s" % (tokenRate, bucketSize)
+print("Simulating %s packets arriving at avg. rate %s" % (numPackets, arrRate))
+print("Token generation rate of %s and max bucket size of %s" % (tokenRate, bucketSize))
 
 # Initialize figure
 fig = plt.figure(figsize=(10, 8))
@@ -74,7 +74,7 @@ interDepartures = [0] * numPackets
 for i in range(1, numPackets):
     interDepartures[i] = departEmpEnv[i] - departEmpEnv[i - 1]
 
-print "\nPlotting figures ... please wait"
+print("\nPlotting figures ... please wait")
 
 # Plot inter-packet time CDFs
 # NOTE: Using matplotlib's histogram to generate CDF results in last point y = 0
@@ -168,4 +168,4 @@ plt.title("Total Wait Times (Queuing + Service) per Packet")
 fig.savefig('pkts-wait-time.png')
 
 
-print "Finished plotting all figures!"
+print("Finished plotting all figures!")
